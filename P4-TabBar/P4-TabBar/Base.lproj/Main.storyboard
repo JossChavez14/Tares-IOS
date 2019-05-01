@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Gb-kE-gzt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--To Do List-->
+        <scene sceneID="wUs-lb-ojy">
+            <objects>
+                <viewController id="4kI-Ya-Hoe" customClass="NewTaskViewController" customModule="P4_TabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gys-Sg-oBH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nombre de tarea" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYp-Vn-RMX">
+                                <rect key="frame" x="32" y="84" width="310" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nse-wm-6Tf">
+                                <rect key="frame" x="155" y="378" width="65" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Agregar"/>
+                                <connections>
+                                    <action selector="addTask:" destination="4kI-Ya-Hoe" eventType="touchUpInside" id="tLA-Kc-Tk2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nueva Tarea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIL-Qq-nPr">
+                                <rect key="frame" x="130" y="37" width="114" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dMm-rF-Ozf">
+                                <rect key="frame" x="27" y="122" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="572838178.35347402">
+                                    <!--2019-02-26 01:42:58 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0aR-Az-2NM"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="To Do List" image="verification-of-delivery-list-clipboard-symbol" selectedImage="verification-of-delivery-list-clipboard-symbol" id="OUg-Tc-bl6"/>
+                    <connections>
+                        <outlet property="taskDate" destination="dMm-rF-Ozf" id="CYz-LQ-c5C"/>
+                        <outlet property="txtTask" destination="oYp-Vn-RMX" id="azr-YI-Fu3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRE-3v-zfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="-205.54722638680661"/>
+        </scene>
+        <!--Add Task-->
+        <scene sceneID="ZZn-x5-4Qt">
+            <objects>
+                <viewController id="A0F-dF-VPl" customClass="TaskViewController" customModule="P4_TabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KKp-7N-Jg1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wbe-6K-zwd">
+                                <rect key="frame" x="16" y="20" width="343" height="591"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="task" textLabel="BYW-m2-pQE" detailTextLabel="Dcu-7v-n7W" style="IBUITableViewCellStyleSubtitle" id="cuU-Du-h7f">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cuU-Du-h7f" id="gkj-hh-6yn">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BYW-m2-pQE">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dcu-7v-n7W">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wbe-6K-zwd" firstAttribute="leading" secondItem="4q3-5M-RQi" secondAttribute="leading" constant="16" id="2Z3-Be-bN1"/>
+                            <constraint firstItem="wbe-6K-zwd" firstAttribute="top" secondItem="4q3-5M-RQi" secondAttribute="top" id="8jM-sz-O5h"/>
+                            <constraint firstItem="4q3-5M-RQi" firstAttribute="bottom" secondItem="wbe-6K-zwd" secondAttribute="bottom" constant="7" id="HRW-4O-XrZ"/>
+                            <constraint firstItem="wbe-6K-zwd" firstAttribute="leading" secondItem="4q3-5M-RQi" secondAttribute="leading" constant="16" id="Pj5-P8-Ps0"/>
+                            <constraint firstItem="4q3-5M-RQi" firstAttribute="trailing" secondItem="wbe-6K-zwd" secondAttribute="trailing" constant="16" id="WuM-LH-jXZ"/>
+                            <constraint firstItem="4q3-5M-RQi" firstAttribute="bottom" secondItem="wbe-6K-zwd" secondAttribute="bottom" constant="7" id="dw1-Wt-HC9"/>
+                            <constraint firstItem="4q3-5M-RQi" firstAttribute="trailing" secondItem="wbe-6K-zwd" secondAttribute="trailing" constant="16" id="kgJ-JL-sOI"/>
+                            <constraint firstItem="wbe-6K-zwd" firstAttribute="centerY" secondItem="KKp-7N-Jg1" secondAttribute="centerY" id="lT1-5L-8Qe"/>
+                            <constraint firstItem="wbe-6K-zwd" firstAttribute="centerX" secondItem="KKp-7N-Jg1" secondAttribute="centerX" id="pto-Gf-yxl"/>
+                            <constraint firstItem="wbe-6K-zwd" firstAttribute="top" secondItem="4q3-5M-RQi" secondAttribute="top" id="yiN-eT-an7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4q3-5M-RQi"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add Task" image="verification-of-delivery-list-clipboard-symbol" badgeValue="1" selectedImage="verification-of-delivery-list-clipboard-symbol" id="mBt-Ts-Rlk"/>
+                    <connections>
+                        <outlet property="tableView" destination="wbe-6K-zwd" id="AEn-MK-izE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIo-4t-QOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="-870.31484257871068"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5Zq-ko-fPp">
+            <objects>
+                <tabBarController id="7Gb-kE-gzt" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vut-HH-grA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4kI-Ya-Hoe" kind="relationship" relationship="viewControllers" id="hbe-QK-tfF"/>
+                        <segue destination="A0F-dF-VPl" kind="relationship" relationship="viewControllers" id="Ghz-7v-vOH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ca0-w2-ERq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="-539"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="verification-of-delivery-list-clipboard-symbol" width="26" height="26"/>
+    </resources>
+</document>
